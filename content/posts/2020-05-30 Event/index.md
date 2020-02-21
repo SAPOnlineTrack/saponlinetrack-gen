@@ -1,6 +1,6 @@
 ---
 title: "May 2020 Event"
-cover: "/images/sitOnline-banner-no-text.png"
+cover: "/images/post-header.png"
 author: "katan"
 date: "2020-02-20"
 category: "tech"
