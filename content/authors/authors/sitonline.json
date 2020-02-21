@@ -1,0 +1,14 @@
+{
+  "uid": "sitonline",
+  "name": "SAP Inside Track Online",
+  "image": "https://pbs.twimg.com/profile_images/1230481063748620288/oqa-f99b_bigger.jpg",
+  "url": "https://sap-inside-track-online.github.io/",
+  "location": "Earth",
+  "bio": "A free SAP Community event hosted entirely online. We are fundraising for Girls Who Code. Please support us on https://classy.org/team/285233",
+  "socialUrls": [
+    "https://www.youtube.com/channel/UCbVRw2p01YO3xdn9aFfVIqg",
+    "https://github.com/SAP-Inside-Track-Online",
+    "https://twitter.com/sapsitonline",
+    "mailto:katansapdevelopment@gmail.com"
+  ]
+}
