@@ -29,35 +29,17 @@ module.exports = {
   postDefaultCategoryID: "Tech", // Default category for posts.
   // Links to social profiles/projects you want to display in the navigation bar.
   userLinks: [
-    /*{
-      label: "GitHub",
-          url: "https://github.com/SAP-Inside-Track-Online",
-      iconClassName: "fa fa-github" // Disabled, see Navigation.jsx
-    },*/
     {
-      label: "Twitter",
-        url: "https://twitter.com/sapsitonline",
-      iconClassName: "fa fa-twitter" // Disabled, see Navigation.jsx
-    },
-    {
-      label: "Email",
-        url: "mailto:sapinsidetrackonline@gmail.com",
-      iconClassName: "fa fa-envelope" // Disabled, see Navigation.jsx
-    },
-    {
-        label: "YouTube",
-          url: "https://www.youtube.com/channel/UCbVRw2p01YO3xdn9aFfVIqg",
-        iconClassName: "fa fa-youtube-play" // Disabled, see Navigation.jsx
-    },
-    {
-      label: "Discord",
-        url: "https://discordapp.com/invite/EgmTNT",
-      iconClassName: "fa fa-comments-o" // Disabled, see Navigation.jsx
+      label: "Latest Event Info",
+        url: "/may-2020-event"
     }, 
     {
       label: "Keen to Speak",
-        url: "/keen-to-speak",
-      iconClassName: "fa fa-microphone"
+        url: "/keen-to-speak"
+    },
+    {
+      label: "Volunteering",
+        url: "/volunteering"
     }
   ],
   // Copyright string for the footer of the website and RSS feed.
