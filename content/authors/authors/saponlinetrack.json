@@ -1,0 +1,14 @@
+{
+  "uid": "saponlinetrack",
+  "name": "SAP Online Track",
+  "image": "https://pbs.twimg.com/profile_images/1232775750882713600/TBYVoAhO_x96.jpg",
+  
+  "url": "https://saponlinetrack.github.io/",
+  "location": "Earth",
+  "bio": "A free SAP Community event hosted entirely online. We are fundraising for Girls Who Code. Please support us on https://classy.org/team/285233",
+  "socialUrls": [
+    "http://bit.ly/saponlinetrack-youtube",
+    "https://github.com/SAP-Inside-Track-Online",
+    "https://twitter.com/sapOnlineTrack"
+  ]
+}
