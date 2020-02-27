@@ -1,7 +1,7 @@
 ---
 title: "Keen to Speak"
 cover: "/images/post-header.png"
-author: "sitonline"
+author: "saponlinetrack"
 category: "general"
 date: "2020-02-19"
 tags:
@@ -19,3 +19,5 @@ Please submit your proposal [here](https://forms.gle/NMY31ips5KwqM8c97) before t
 ## What do I need to present
 
 You might think that you need a semi professional setup to do a session. Trust us you really don’t. A computer, headset and an internet connection is enough. You can also chose whether or not you want to use Webcam. This is entirely up to you. No pressure from our side. We really just appreciate your contribution.
+
+Please also make sure to read and familiarise yourself with our [Code of Conduct Policy](/code-of-conduct)

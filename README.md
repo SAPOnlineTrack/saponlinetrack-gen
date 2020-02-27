@@ -2,14 +2,13 @@
     <img src="static/logos/logo-1024.png" alt="Logo" width='200px' height='200px'/>
 </div>
 
-# SitBNE Site Generator
+# SAP Online Track Site Generator
 
-A site generator for SAP Inside Track Online built using the Gatsby v2 fork of [gatsby-starter-casper](https://github.com/haysclark/gatsby-starter-casper) by [@haysclark](https://github.com/haysclark). The upgrade to v2 was mostly done by [@hnspn](https://github.com/hnspn) with a little help from the folks at [GatsbyCentral](https://www.gatsbycentral.com/).
+A site generator for SAP Online Track  built using the Gatsby v2 fork of [gatsby-starter-casper](https://github.com/haysclark/gatsby-starter-casper) by [@haysclark](https://github.com/haysclark). The upgrade to v2 was mostly done by [@hnspn](https://github.com/hnspn) with a little help from the folks at [GatsbyCentral](https://www.gatsbycentral.com/).
 
-![Screenshot](docs/sitonline-screenshot.png)
+![Screenshot](docs/saponline-screenshot.png)
 
 ## Features
-
 * Blazing fast loading times thanks to pre-rendered HTML and automatic chunk loading of JS files
 * Separate components for everything
 * High configurability:
@@ -70,11 +69,11 @@ NOTE: Feel free to check out [Gatsby Material Starter](https://github.com/Vagr9K
 Clone the repo or a fork of the repo and install it manually.
 
 ```sh
-git clone https://github.com/sitbne/sitbne-site-generator/ YourProjectName # Clone the project
+git clone https://github.com/SAPOnlineTrack/saponlinetrack-gen YourProjectName # Clone the project
 cd YourProjectname
 rm -rf .git # Optional, you can leave the .git history for future rebasing
-npm install # or yarn install
-npm run develop # or gatsby develop
+npm install # or yarn install (if running npm install as root or sudo run "npm install --unsafe-perm" due to sharp dependency https://sharp.pixelplumbing.com/install)
+npm run develop # or gatsby develop (to specifiy a specfic IP using -H "gatsby develop -H 192.168.1.1")
 ```
 
 ## Configuration
@@ -157,6 +156,13 @@ Posts are authored using Markdown and include some optional YAML frontmatter dat
 ### Authors
 
 Each post can reference the author of the post, if the author is not set the default author will be used; which is controlled by the _blogAuthorId_ property in _SiteConfig.js_.  All authors, including the default author (aka _blodAuthorId_) must have an author JSON file.  These JSON files MUST be stored in a folder names ```authors```, for Gatsby to parse them correctly.  The location of this ```authors``` folder can be controlled by the _blogAuthorDir_ property in _SiteConfig.js_. It IS possible to have the ```authors``` folder inside the  _blogPostDir_ folder.
+
+## Building Your Project
+
+```sh
+npm run clean # Clears the build and cache folders for your project
+gatsby build  # Generates the deployable project in the "public" folder.  You can replace all files of your existing github pages site with this build, taking care not to remove the ".git" folder
+```
 
 ## Contributing
 

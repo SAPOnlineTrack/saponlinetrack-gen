@@ -37,7 +37,7 @@
 /* When the navigation is closed */
 .nav-closed .menu-button {
     color: #222;
-    border-color: rgba(255, 255, 255, 0.6);
+    border-color: #111;
 }
 
 .nav-closed .menu-button:hover {
