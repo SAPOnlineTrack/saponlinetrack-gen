@@ -7,7 +7,7 @@ module.exports = {
   siteLogo: "/logos/home.png", // Logo used for SEO and manifest. e.g. "/logos/logo-1024.png",
   siteUrl: "https://SAPOnlineTrack.github.", // sitbneDomain of your website without pathPrefix.
   pathPrefix: "io", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
-  siteDescription: "We're so excited to bring you a new way to access SAP Inside Track. An international grassroots community event organised where SAP Community members come together to share knowledge, expertise, and to network", // Website description used for RSS feeds/meta description tag.
+  siteDescription: "A free SAP Community event hosted entirely online", // Website description used for RSS feeds/meta description tag.
   siteCover:"/images/home-banner.jpg", // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
   siteNavigation: true, // If navigation is enabled the Menu button will be visible
   siteBanner:"We are fundraising for Girls Who Code. Please click here to show support and donate", // Site Banner 

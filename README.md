@@ -6,6 +6,8 @@
 
 A site generator for SAP Online Track  built using the Gatsby v2 fork of [gatsby-starter-casper](https://github.com/haysclark/gatsby-starter-casper) by [@haysclark](https://github.com/haysclark). The upgrade to v2 was mostly done by [@hnspn](https://github.com/hnspn) with a little help from the folks at [GatsbyCentral](https://www.gatsbycentral.com/).
 
+If starting from scratch with Gatsby, please follow this [guide](https://www.gatsbyjs.org/tutorial/part-zero/#using-the-gatsby-cli) to setup your environment.
+
 ![Screenshot](docs/saponline-screenshot.png)
 
 ## Features
@@ -73,7 +75,7 @@ git clone https://github.com/SAPOnlineTrack/saponlinetrack-gen YourProjectName #
 cd YourProjectname
 rm -rf .git # Optional, you can leave the .git history for future rebasing
 npm install # or yarn install (if running npm install as root or sudo run "npm install --unsafe-perm" due to sharp dependency https://sharp.pixelplumbing.com/install)
-npm run develop # or gatsby develop (to specifiy a specfic IP using -H "gatsby develop -H 192.168.1.1")
+npm run develop # or gatsby develop (to specify a specific IP using -H "gatsby develop -H 192.168.1.1")
 ```
 
 ## Configuration
