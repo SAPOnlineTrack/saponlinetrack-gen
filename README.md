@@ -166,6 +166,12 @@ npm run clean # Clears the build and cache folders for your project
 gatsby build  # Generates the deployable project in the "public" folder.  You can replace all files of your existing github pages site with this build, taking care not to remove the ".git" folder
 ```
 
+Or as an alternative
+
+```sh
+npm run build:gh #This clears the build and cache folders for your project, runs the build and deploys to the github pages site (defined as part of the deploy command in the package.json file) master branch
+```
+
 ## Contributing
 
 👍🎉 First off, thanks for taking the time to contribute! 🎉👍

@@ -25,6 +25,10 @@ In short, we felt the time was right to try it out. The [SAP Inside Track](https
 
 Also, we are making this a [fundraising event](https://www.classy.org/team/285233), where we are raising money for [GirlsWhoCode](https://girlswhocode.com/). So while the event will be free for everyone to join, please consider donating to this great cause. This is really something that has a big personal interest for our team to raise awareness of the huge gender gap in technology. Especially in SAP, you can listen to the [SAP Coffee Corner](https://anchor.fm/sap-community-podcast/episodes/Episode-35-Where-are-the-women-in-the-SAP-Community-eal8bc/a-a1dk1gu) podcast with [Anne Kathrine Petterøe](https://twitter.com/yojibee) if you want to learn more.
 
+## Check out Anne's update
+
+`youtube: https://www.youtube.com/watch?v=cC9TA-5Axcc`
+
 ## When is this taking place
 
 The event will start on the 30th of May 2020 at 12 noon CET. Then the aim is to keep the event going for 24 hours until noon on the 31st of May. We hope we will get enough sessions to fill all the 24 hours and hopefully in multiple tracks, so there is something for everyone.
@@ -34,6 +38,10 @@ The event will start on the 30th of May 2020 at 12 noon CET. Then the aim is to 
 You might think that you need a semi professional setup to do a session. Trust me you really don’t. A computer, headset and an internet connection is enough. You can also chose whether or not you want to use Webcam. This is entirely up to you. No pressure from our side. We really just appreciate your contribution.
 
 Please submit your proposal [here](https://forms.gle/NMY31ips5KwqM8c97) before the 1st of may. That gives us a chance to work out a calendar.
+
+### Latest event session listing
+
+The current listing of session talks can be found [here](/sessions).
 
 ### How can I help
 

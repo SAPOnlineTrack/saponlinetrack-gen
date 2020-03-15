@@ -60,3 +60,6 @@ bundle-stats.json
 
 # macOS
 .DS_Store
+
+# Private Keys
+Keys

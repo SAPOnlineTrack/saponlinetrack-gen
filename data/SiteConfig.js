@@ -2,6 +2,7 @@ module.exports = {
   blogPostDir: "posts", // The name of directory that contains your posts.
   blogAuthorDir: "authors", // The name of directory that contains your 'authors' folder.
   blogAuthorId: "saponlinetrack", // The default and fallback author ID used for blog posts without a defined author.
+  blogPostHeaders:"/images/post-header.png",
   siteTitle: "SAP Online Track ", // Site title.
   siteTitleAlt: "SAP Online Track", // Alternative site title for SEO.
   siteLogo: "/logos/home.png", // Logo used for SEO and manifest. e.g. "/logos/logo-1024.png",
@@ -10,8 +11,11 @@ module.exports = {
   siteDescription: "A free SAP Community event hosted entirely online", // Website description used for RSS feeds/meta description tag.
   siteCover:"/images/home-banner.jpg", // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
   siteNavigation: true, // If navigation is enabled the Menu button will be visible
-  siteBanner:"We are fundraising for Girls Who Code. Please click here to show support and donate", // Site Banner 
-  siteBannerUrl: "https://classy.org/team/285233", //Path to page to navigate from Site Banner
+  siteBanner:"Check out the Latest Weekly Update", // Site Banner 
+  siteBannerUrl: "https://www.youtube.com/watch?v=Q-2PcZx3F70", //Path to page to navigate from Site Banner
+  siteCharityText:"Show Support & Donate", // Site Banner 
+  siteCharityUrl: "https://classy.org/team/285233", //Path to page to navigate from Site Banner
+  siteCharityImgUrl: "/images/GirlsWhoCodeLogo-White-on-Blue.jpg", //Path to image of charity URL 
   siteRss: "", //"/rss.xml", // Path to the RSS file.
   siteRssAuthor: "", //"Casper User", // The author name used in the RSS file
   // siteFBAppID: "1825356251115265", // optional, sets the FB Application ID for using app insights 
@@ -29,7 +33,11 @@ module.exports = {
     {
       label: "Latest Event Info",
         url: "/may-2020-event"
-    }, 
+    },
+    {
+      label: "Latest Event Sessions",
+        url: "/sessions"
+    },
     {
       label: "Keen to Speak",
         url: "/keen-to-speak"
@@ -51,5 +59,5 @@ module.exports = {
   },
   themeColor: "#c62828", // Used for setting manifest and progress theme colors.
   backgroundColor: "#e0e0e0", // Used for setting manifest background color.
-  promoteGatsby: false // Enables the GatsbyJS promotion information in footer.
+  promoteGatsby: true // Enables the GatsbyJS promotion information in footer.
 };

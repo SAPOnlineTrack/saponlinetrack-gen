@@ -16,6 +16,7 @@ import MenuButton from "../components/MenuButton/MenuButton";
 import PageTitle from "../components/PageTitle/PageTitle";
 import PageDescription from "../components/PageDescription/PageDescription";
 import PageBanner from "../components/PageBanner/PageBanner";
+import PageCharity from "../components/PageCharity/PageCharity";
 import PaginatedContent from "../components/PaginatedContent/PaginatedContent";
 import SocialMediaIcons from "../components/SocialMediaIcons/SocialMediaIcons";
 import Layout from "../components/layout";
@@ -83,13 +84,15 @@ class IndexTemplate extends React.Component {
                 <div className="vertical">
                   <div className="main-header-content inner">
                     <PageTitle text={config.siteTitle} />
-                                    <PageDescription text={config.siteDescription} />
-                                    <PageBanner text={config.siteBanner} url={config.siteBannerUrl} />
+                    <PageDescription text={config.siteDescription} />
+                    <PageBanner text={config.siteBanner} url={config.siteBannerUrl} />
                     <SocialMediaIcons
                       urls={config.siteSocialUrls}
                       color="currentColor"
                     />
+                    <PageCharity text={config.siteCharityText} url={config.siteCharityUrl} imgUrl={config.siteCharityImgUrl} />
                   </div>
+                  
                 </div>
                 <Link
                   className="scroll-down icon-arrow-left"
