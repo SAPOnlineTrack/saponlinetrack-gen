@@ -2,7 +2,7 @@ module.exports = {
   blogPostDir: "posts", // The name of directory that contains your posts.
   blogAuthorDir: "authors", // The name of directory that contains your 'authors' folder.
   blogAuthorId: "saponlinetrack", // The default and fallback author ID used for blog posts without a defined author.
-  blogPostHeaders:"/images/post-header.png",
+  blogPostHeaders:"/images/post-header.png", //Blog post header image
   siteTitle: "SAP Online Track ", // Site title.
   siteTitleAlt: "SAP Online Track", // Alternative site title for SEO.
   siteLogo: "/logos/home.png", // Logo used for SEO and manifest. e.g. "/logos/logo-1024.png",

@@ -87,6 +87,7 @@ npm run develop # or gatsby develop (to specify a specific IP using -H "gatsby d
      blogPostDir: "sample-posts", // The name of directory that contains your posts.
      blogAuthorDir: "sample-authors", // The name of directory that contains your authors.
      blogAuthorId: "casper", // The default and fallback author ID used for blog posts without a defined author.
+     blogPostHeaders:"/images/post-header.png", //Blog post header image
      siteTitle: "Gatsby Casper Starter", // Site title.
      siteTitleAlt: "GatsbyJS Casper Theme Starter", // Alternative site title for SEO.
      siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.

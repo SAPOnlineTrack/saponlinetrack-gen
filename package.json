@@ -78,7 +78,7 @@
     "build": "gatsby build",
     "build:pp": "gatsby build --prefix-paths",
     "deploy": "gh-pages -d public -r 'https://github.com/SAPOnlineTrack/SAPOnlineTrack.github.io.git' -b master",
-    "build:gh": "npm run clean && npm run build:pp && deploy",
+    "build:gh": "npm run clean && npm run build:pp && npm run deploy",
     "gh:help": "gh-pages --help",
     "clean": "rm -rf .cache && rm -rf public",
     "lint": "npm run lint:js && npm run lint:css && npm run lint:md",
