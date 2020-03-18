@@ -71,7 +71,7 @@ module.exports = {
             options: {
                 spreadsheetId: '1LAKhinHcv6OBkefE7gPuoogGqQNZx1IvEtug8KJyDoQ',
                 worksheetTitle: 'Speakers',
-                credentials: require('./keys/saponlinetrack-8ca963014424.json')
+                credentials: require('./keys/saponlinetrack-c7ba3935d320.json')
           }
         },
         ]

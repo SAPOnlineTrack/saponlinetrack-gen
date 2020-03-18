@@ -10,6 +10,8 @@ import BlogLogo from "../components/BlogLogo/BlogLogo";
 import MenuButton from "../components/MenuButton/MenuButton";
 import Footer from "../components/Footer/Footer";
 import Layout from "../components/layout";
+import Table from 'react-bootstrap/Table';
+
 import "./sessions.css";
 
 class SessionsPage extends Component {
@@ -72,22 +74,26 @@ class SessionsPage extends Component {
 
             {/* List of all the online track sessions pulled from the google sheet */}
             {/* Need to redo this to break it up into components*/}
-            <div class='sessions-page'>
+            <div className='sessions-page'>
             <h2>SAP Online Track Session List</h2>
-            <div class='sessions-text'>
+            <div className='sessions- text'>
               This is the latest list of registered sessions for SAP Online Track.   
               If you are keen to run your own session, please register via our <a href="/keen-to-speak">google form</a>.
             </div>  
-            <table className="sessions-table">
+            <div>
+            <Table striped bordered hover size="sm" responsive>
+            <thead>
               <tr>
                 <th>Track</th>
                 <th>Title of Session</th>
                 <th>Twitter Handle</th>
                 <th>SCN Handle</th>
              </tr>
+             </thead>
+             <tbody>
              {sessions.map((session, i) => 
 
-             <tr>
+             <tr key={i}>
                 <td>{session.track}</td>
                 <td>{session.titleofthesession}</td>
                 <td>
@@ -96,8 +102,9 @@ class SessionsPage extends Component {
                 <td><a href={'https://people.sap.com/' + session.useronthesapcommunity}>{session.useronthesapcommunity}</a></td>
               </tr>
             )}
-            
-            </table>
+            </tbody>
+            </Table>
+            </div>
             </div>
 
 
