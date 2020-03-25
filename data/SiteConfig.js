@@ -12,7 +12,7 @@ module.exports = {
   siteCover:"/images/home-banner.jpg", // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
   siteNavigation: true, // If navigation is enabled the Menu button will be visible
   siteBanner:"Check out the Latest Weekly Update", // Site Banner 
-  siteBannerUrl: "https://www.youtube.com/watch?v=GGTB6yjX5aE", //Path to page to navigate from Site Banner
+  siteBannerUrl: "https://www.youtube.com/watch?v=o3Qi82gc6io", //Path to page to navigate from Site Banner
   siteCharityText:"Show Support & Donate", // Site Banner 
   siteCharityUrl: "https://classy.org/team/285233", //Path to page to navigate from Site Banner
   siteCharityImgUrl: "/images/GirlsWhoCodeLogo-White-on-Blue.jpg", //Path to image of charity URL 
@@ -25,7 +25,7 @@ module.exports = {
   siteSocialUrls: [
       "https://twitter.com/sapOnlineTrack",
       "https://discordapp.com/invite/MEsFFVW",
-      "https://www.youtube.com/channel/UCbVRw2p01YO3xdn9aFfVIqg/featured"
+      "https://www.youtube.com/saponlinetrack"
   ],
   postDefaultCategoryID: "Tech", // Default category for posts.
   // Links to social profiles/projects you want to display in the navigation bar.
