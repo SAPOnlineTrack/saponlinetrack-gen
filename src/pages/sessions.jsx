@@ -85,9 +85,11 @@ class SessionsPage extends Component {
             <thead>
               <tr>
                 <th>Track</th>
-                <th>Title of Session</th>
-                <th>Twitter Handle</th>
-                <th>SCN Handle</th>
+                <th>Title</th>
+                <th>Duration</th>
+                <th>Language</th>
+                <th>Speaker Twitter Handle</th>
+                <th>Speaker SCN Handle</th>
              </tr>
              </thead>
              <tbody>
@@ -96,6 +98,8 @@ class SessionsPage extends Component {
              <tr key={i}>
                 <td>{session.track}</td>
                 <td>{session.titleofthesession}</td>
+                <td>{session.howlongisyoursession}</td>
+                <td>{session.languageofyoursession}</td>
                 <td>
                   <a href={this.convertTwitterHandleToHRef(session.twitterhandle)}>{session.twitterhandle}</a>
                 </td>
