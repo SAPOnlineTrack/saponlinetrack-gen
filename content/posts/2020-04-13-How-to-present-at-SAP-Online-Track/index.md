@@ -1,9 +1,9 @@
 ---
 title: "How to present at SAP Online Track"
 cover: "/images/post-header.png"
-author: "saponlinetrack"
+author: "ronnie"
 category: "general"
-date: "2020-02-19"
+date: "2020-04-14"
 tags:
     - presenting
 ---

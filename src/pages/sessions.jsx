@@ -10,7 +10,9 @@ import BlogLogo from "../components/BlogLogo/BlogLogo";
 import MenuButton from "../components/MenuButton/MenuButton";
 import Footer from "../components/Footer/Footer";
 import Layout from "../components/layout";
-import Table from 'react-bootstrap/Table';
+
+import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 
 import "./sessions.css";
 
@@ -81,32 +83,33 @@ class SessionsPage extends Component {
               If you are keen to run your own session, please register via our <a href="/keen-to-speak">google form</a>.
             </div>  
             <div>
-            <Table striped bordered hover size="sm" responsive>
-            <thead>
-              <tr>
-                <th>Track</th>
-                <th>Title</th>
-                <th>Duration</th>
-                <th>Language</th>
-                <th>Speaker Twitter Handle</th>
-                <th>Speaker SCN Handle</th>
-             </tr>
-             </thead>
-             <tbody>
+          
+            <Table>
+            <Thead>
+              <Tr>
+                <Th>Track</Th>
+                <Th>Title</Th>
+                <Th>Duration</Th>
+                <Th>Language</Th>
+                <Th>Twitter</Th>
+                <Th>SCN</Th>
+             </Tr>
+             </Thead>
+             <Tbody>
              {sessions.map((session, i) => 
 
-             <tr key={i}>
-                <td>{session.track}</td>
-                <td>{session.titleofthesession}</td>
-                <td>{session.howlongisyoursession}</td>
-                <td>{session.languageofyoursession}</td>
-                <td>
+             <Tr key={i}>
+                <Td>{session.track}</Td>
+                <Td>{session.titleofthesession}</Td>
+                <Td>{session.howlongisyoursession}</Td>
+                <Td>{session.languageofyoursession}</Td>
+                <Td>
                   <a href={this.convertTwitterHandleToHRef(session.twitterhandle)}>{session.twitterhandle}</a>
-                </td>
-                <td><a href={'https://people.sap.com/' + session.useronthesapcommunity}>{session.useronthesapcommunity}</a></td>
-              </tr>
+                </Td>
+                <Td><a href={'https://people.sap.com/' + session.useronthesapcommunity}>{session.useronthesapcommunity}</a></Td>
+              </Tr>
             )}
-            </tbody>
+            </Tbody>
             </Table>
             </div>
             </div>
