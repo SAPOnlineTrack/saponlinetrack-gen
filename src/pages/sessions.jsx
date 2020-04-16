@@ -48,6 +48,8 @@ class SessionsPage extends Component {
     
     return "https://twitter.com/" + twitterHandle.substr(1);
   };
+  
+
 
   render() {
 
@@ -104,11 +106,15 @@ class SessionsPage extends Component {
                 <Td>{session.howlongisyoursession}</Td>
                 <Td>{session.languageofyoursession}</Td>
                 <Td>
-                  
+                  {session.twitterhandle !== null &&
                   <a href={this.convertTwitterHandleToHRef(session.twitterhandle)}>{session.twitterhandle}</a>
-  
+                  }
                 </Td>
-                <Td><a href={'https://people.sap.com/' + session.useronthesapcommunity}>{session.useronthesapcommunity}</a></Td>
+                <Td>
+                {session.useronthesapcommunity !== null &&
+                  <a href={'https://people.sap.com/' + session.useronthesapcommunity}>{session.useronthesapcommunity}</a>
+                }
+                </Td>
               </Tr>
             )}
             </Tbody>
