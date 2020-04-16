@@ -104,7 +104,9 @@ class SessionsPage extends Component {
                 <Td>{session.howlongisyoursession}</Td>
                 <Td>{session.languageofyoursession}</Td>
                 <Td>
+                  
                   <a href={this.convertTwitterHandleToHRef(session.twitterhandle)}>{session.twitterhandle}</a>
+  
                 </Td>
                 <Td><a href={'https://people.sap.com/' + session.useronthesapcommunity}>{session.useronthesapcommunity}</a></Td>
               </Tr>
