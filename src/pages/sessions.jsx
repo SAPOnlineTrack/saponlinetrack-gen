@@ -91,6 +91,7 @@ class SessionsPage extends Component {
               <Tr>
                 <Th>Track</Th>
                 <Th>Title</Th>
+                <Th>Speaker</Th>
                 <Th>Duration</Th>
                 <Th>Language</Th>
                 <Th>Twitter</Th>
@@ -103,6 +104,7 @@ class SessionsPage extends Component {
              <Tr key={i}>
                 <Td>{session.track}</Td>
                 <Td>{session.titleofthesession}</Td>
+                <Td>{session.yourname}</Td>
                 <Td>{session.howlongisyoursession}</Td>
                 <Td>{session.languageofyoursession}</Td>
                 <Td>
@@ -149,6 +151,7 @@ query {
       sessiondescription
       emailaddress
       useronthesapcommunity
+      yourname
     }
   }
 }
