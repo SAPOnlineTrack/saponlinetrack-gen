@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { graphql } from 'gatsby'
 import Helmet from "react-helmet";
 import config from "../../data/SiteConfig";
 import Drawer from "../components/Drawer/Drawer";
@@ -86,7 +87,7 @@ class SessionsPage extends Component {
             </div>  
             <div>
           
-            <Table>
+            <Table className='sessions-table'>
             <Thead>
               <Tr>
                 <Th>Track</Th>

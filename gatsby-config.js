@@ -72,8 +72,16 @@ module.exports = {
                 spreadsheetId: '1LAKhinHcv6OBkefE7gPuoogGqQNZx1IvEtug8KJyDoQ',
                 worksheetTitle: 'Speakers',
                 credentials: require('./keys/saponlinetrack-c7ba3935d320.json')
+            }
+          },
+          {
+            resolve: 'gatsby-source-google-sheets',
+            options: {
+                spreadsheetId: '17jQoUKUTDZzrEjmVqVo_PEODqENGMTyUOr_bRrW-iLM',
+                worksheetTitle: 'Sheet1',
+                credentials: require('./keys/saponlinetrack-c7ba3935d320.json')
+            }
           }
-        },
         ]
       }
     },

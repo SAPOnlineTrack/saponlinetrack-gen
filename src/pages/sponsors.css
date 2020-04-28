@@ -1,0 +1,27 @@
+.sponsors-page {
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    margin-left: 5%;
+    margin-right: 5%; 
+}
+
+.sponsors-list {
+    font-size: 2rem;
+    line-height: 1.5em;
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 0.01rem;
+    border-color: black;
+    border-top: black;
+    list-style-type: none;
+    color: white;
+    background-color: black;
+    align-content: center;
+}
+
+.sponsors-list li {
+  margin: 10 rem;
+  padding-top: 20px;  
+}
+
