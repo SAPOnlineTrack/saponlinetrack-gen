@@ -27,10 +27,20 @@
     border-top: black;
 }
 
-.sessions-table table, th, td, tr {
+.sessions-table table, th, td, tr, table tbody > tr:nth-child(odd) > td, table tbody > tr:nth-child(odd) > th, table th {
     padding: 15px;
     border: 1px solid black;
     border-color: black;
     border-top: 1px solid black !important;
+    background-color: black;
+    color: white
 }
+
+.sessions-table body {
+    color: white
+}
+
+.sessions-table a {
+  color: #0890f1;
+  }
 
