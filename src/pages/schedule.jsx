@@ -12,9 +12,12 @@ import MenuButton from "../components/MenuButton/MenuButton";
 import Footer from "../components/Footer/Footer";
 import Layout from "../components/layout";
 
-import "./sponsors.css";
+import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 
-class SponsorsPage extends Component {
+import "./schedule.css";
+
+class SchedulePage extends Component {
   state = {
     menuOpen: false
   };
@@ -41,17 +44,16 @@ class SponsorsPage extends Component {
     this.setState({ menuOpen: false });
   };
   
-
   render() {
 
-    const sponsors = this.props.data.allGoogleSheetSheet1Row.nodes;
+    const sessions = this.props.data.allGoogleSheetSpeakersRow.nodes;
 
     return (
-      <div className="sponsors-container">
-        <Helmet title={`Sponsors | ${config.siteTitle}`} />
+      <div className="sessions-container">
+        <Helmet title={`Sessions | ${config.siteTitle}`} />
         <Layout location={this.props.location}>
-        <Drawer className="sponsors-template" isOpen={this.state.menuOpen}>
-          <Helmet title={`Sponsors | ${config.siteTitle}`} />
+        <Drawer className="sessions-template" isOpen={this.state.menuOpen}>
+          <Helmet title={`Speaker Sessions | ${config.siteTitle}`} />
 
           {/* The blog navigation links */}
           <Navigation config={config} onClose={this.handleOnClose} />
@@ -69,28 +71,39 @@ class SponsorsPage extends Component {
 
             {/* List of all the online track sessions pulled from the google sheet */}
             {/* Need to redo this to break it up into components*/}
-            <div className='sponsors-page'>
-              <h2>Sponsors</h2>
-              <div className='sponsors-text'>
-                We would like to thank all our sponsors and partners. Without them, it would not have been possible for us to make SAP Online Track such a great success.
+            <div className='schedule-page'>
+            <h2>SAP Online Track Schedule</h2>
+            <div className='schedule-text'>
+              This is the latest list of registered sessions for SAP Online Track.   
+              If you are keen to run your own session, please register via our <a href="/keen-to-speak">google form</a>.
+            </div>  
+            <div>
+          
+            <Table className='schedule-table'>
+            <Thead>
+              <Tr>
+                <Th>Time (UTC)</Th>
+                <Th>Track 1</Th>
+                <Th>Track 2</Th>
+                <Th>Track 3</Th>
+             </Tr>
+             </Thead>
+             <Tbody>
+             {sessions.map((session, i) => 
 
-                We hope our relationship with our various sponsors and partners continues in the future. 
-              </div>  
-              <div>
-                <ul className='sponsors-list'>
-                  {sponsors.map((sponsor, i) => 
-                  <li key={i}>
-                    <a href={sponsor.website}>
-                      <img src={'/images/sponsor_logos/' + sponsor.logo} alt={sponsor.name} 
-                        srcSet={ '/images/sponsor_logos/512/' + sponsor.logo + ' 512w, /images/sponsor_logos/192/' + sponsor.logo + ' 192w'} 
-                        sizes="(max-width: 800px) 192px, 512px"
-                        />
-                    </a>
-                  </li> 
-                  )}
-                </ul>
-              </div>
+             <Tr key={i}>
+                <Td>10:00</Td>
+                <Td>{session.titleofthesession}</Td>
+                <Td>{session.yourname}</Td>
+                <Td>{session.howlongisyoursession}</Td>
+                
+              </Tr>
+            )}
+            </Tbody>
+            </Table>
             </div>
+            </div>
+
 
             {/* The tiny footer at the very bottom */}
             <Footer
@@ -108,15 +121,21 @@ class SponsorsPage extends Component {
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
 query {
-  allGoogleSheetSheet1Row(filter: {status: {eq: "Agreed"}}) {
+  allGoogleSheetSpeakersRow(sort: {fields: track}, filter: {track: {ne: "?"}}) {
     nodes {
-      name
-      website
-      logo
+      twitterhandle
+      titleofthesession
+      track
+      languageofyoursession
+      howlongisyoursession
+      sessiondescription
+      emailaddress
+      useronthesapcommunity
+      yourname
     }
   }
 }
 `;
 
 
-export default SponsorsPage;
+export default SchedulePage;
