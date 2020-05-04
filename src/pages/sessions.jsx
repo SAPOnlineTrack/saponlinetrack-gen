@@ -92,11 +92,10 @@ class SessionsPage extends Component {
               <Tr>
                 <Th>Track</Th>
                 <Th>Title</Th>
+                <Th className='collapsable'>Description</Th>
                 <Th>Speaker</Th>
                 <Th>Duration</Th>
                 <Th>Language</Th>
-                <Th>Twitter</Th>
-                <Th>SCN</Th>
              </Tr>
              </Thead>
              <Tbody>
@@ -105,19 +104,22 @@ class SessionsPage extends Component {
              <Tr key={i}>
                 <Td>{session.track}</Td>
                 <Td>{session.titleofthesession}</Td>
-                <Td>{session.yourname}</Td>
-                <Td>{session.howlongisyoursession}</Td>
-                <Td>{session.languageofyoursession}</Td>
+                <Td className='collapsable'>{session.sessiondescription}</Td>
                 <Td>
+                  {session.useronthesapcommunity !== null &&
+                    <a href={'https://people.sap.com/' + session.useronthesapcommunity}>{session.yourname}</a>
+                  }
+                  {
+                  session.useronthesapcommunity === null &&
+                    session.yourname
+                  }
+                  <br/>
                   {session.twitterhandle !== null &&
-                  <a href={this.convertTwitterHandleToHRef(session.twitterhandle)}>{session.twitterhandle}</a>
+                  <a href={this.convertTwitterHandleToHRef(session.twitterhandle)}>({session.twitterhandle})</a>
                   }
                 </Td>
-                <Td>
-                {session.useronthesapcommunity !== null &&
-                  <a href={'https://people.sap.com/' + session.useronthesapcommunity}>{session.useronthesapcommunity}</a>
-                }
-                </Td>
+                <Td>{session.howlongisyoursession}</Td>
+                <Td>{session.languageofyoursession}</Td>
               </Tr>
             )}
             </Tbody>
