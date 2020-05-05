@@ -19,7 +19,13 @@ git clone https://github.com/SAPOnlineTrack/saponlinetrack-gen YourProjectName #
 cd YourProjectname
 rm -rf .git # Optional, you can leave the .git history for future rebasing
 npm install # or yarn install (if running npm install as root or sudo run "npm install --unsafe-perm" due to sharp dependency https://sharp.pixelplumbing.com/install)
-npm run develop # or gatsby develop (to specify a specific IP using -H "gatsby develop -H 192.168.1.1")
+1")
+```
+
+To run the project for real time editing, execute the following command.  Note you might see some errors, related to Google Sheets.  Please ignore these, as they relate to content, you cannot access, unless explicitly approved by the SAP Online Track Team.  The project however will generate and run bar the pages dependent on Google Sheets.
+
+```sh
+npm run develop # or gatsby develop (to specify a specific IP using -H "gatsby develop -H 192.168.1.
 ```
 
 ## Configuration
