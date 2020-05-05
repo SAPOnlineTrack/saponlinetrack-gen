@@ -94,8 +94,6 @@ class SessionsPage extends Component {
                 <Th>Title</Th>
                 <Th className='collapsable'>Description</Th>
                 <Th>Speaker</Th>
-                <Th>Duration</Th>
-                <Th>Language</Th>
              </Tr>
              </Thead>
              <Tbody>
@@ -103,7 +101,14 @@ class SessionsPage extends Component {
 
              <Tr key={i}>
                 <Td>{session.track}</Td>
-                <Td>{session.titleofthesession}</Td>
+                <Td>
+                  {session.titleofthesession}
+                  <br/>
+                  <br/>
+                  {session.howlongisyoursession}
+                  <br/>
+                  {session.languageofyoursession}
+                </Td>
                 <Td className='collapsable'>{session.sessiondescription}</Td>
                 <Td>
                   {session.useronthesapcommunity !== null &&
@@ -118,8 +123,6 @@ class SessionsPage extends Component {
                   <a href={this.convertTwitterHandleToHRef(session.twitterhandle)}>({session.twitterhandle})</a>
                   }
                 </Td>
-                <Td>{session.howlongisyoursession}</Td>
-                <Td>{session.languageofyoursession}</Td>
               </Tr>
             )}
             </Tbody>

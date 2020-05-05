@@ -20,10 +20,17 @@
 }
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1031px) {
     .collapsable{
         display: none;
     }
+}
+
+@media only screen and (max-width: 40em) {
+    .collapsable.pivoted{
+        display: none;
+    
+    } 
 }
 
 .sessions-table table{
