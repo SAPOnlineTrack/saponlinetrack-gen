@@ -31,7 +31,7 @@ Also, we are making this a [fundraising event](https://www.classy.org/team/28523
 
 ## When is this taking place
 
-The event will start on the 30th of May 2020 at 12 noon CET. Then the aim is to keep the event going for 24 hours until noon on the 31st of May. We hope we will get enough sessions to fill all the 24 hours and hopefully in multiple tracks, so there is something for everyone.
+The event will start on the 30th of May 2020 at 12 noon UTC (apologies this was previously incorrectly CET). Then the aim is to keep the event going for 24 hours until noon on the 31st of May. We hope we will get enough sessions to fill all the 24 hours and hopefully in multiple tracks, so there is something for everyone.
 
 ### How can I present
 
