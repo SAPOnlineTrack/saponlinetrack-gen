@@ -33,6 +33,12 @@ module.exports = {
         path: `${__dirname}/content/${config.blogAuthorDir}`
       }
     },
+    {
+      resolve: 'gatsby-plugin-react-leaflet',
+      options: {
+        linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
+      }
+    },
     "gatsby-transformer-json",
     {
       resolve: "gatsby-transformer-remark",
@@ -70,6 +76,15 @@ module.exports = {
             resolve: 'gatsby-source-google-sheets',
             options: {
                 spreadsheetId: '1LAKhinHcv6OBkefE7gPuoogGqQNZx1IvEtug8KJyDoQ',
+                worksheetTitle: 'SpeakerLocations',
+                credentials: require('./keys/saponlinetrack-5a50ee74ea26.json')
+            }
+          },
+          
+          {
+            resolve: 'gatsby-source-google-sheets',
+            options: {
+                spreadsheetId: '1LAKhinHcv6OBkefE7gPuoogGqQNZx1IvEtug8KJyDoQ',
                 worksheetTitle: 'Speakers',
                 credentials: require('./keys/saponlinetrack-5a50ee74ea26.json')
             }
@@ -82,6 +97,7 @@ module.exports = {
                 credentials: require('./keys/saponlinetrack-5a50ee74ea26.json')
             }
           }
+          
         ]
       }
     },

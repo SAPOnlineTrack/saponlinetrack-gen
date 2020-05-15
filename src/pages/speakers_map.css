@@ -1,0 +1,12 @@
+.speakers-map-page {
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    margin-left: 5%;
+    margin-right: 5%; 
+}
+
+.SpeakerMap {
+    height: 600px;
+}
+

@@ -83,7 +83,7 @@ class SessionsPage extends Component {
             <h2>SAP Online Track Session List</h2>
             <div className='sessions- text'>
               This is the latest list of registered sessions for SAP Online Track.   
-              If you are keen to run your own session, please register via our <a href="/keen-to-speak">google form</a>.
+              Unfortunately registration for this event is now closed.
             </div>  
             <div>
           
