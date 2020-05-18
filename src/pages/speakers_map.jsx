@@ -12,6 +12,7 @@ import MenuButton from "../components/MenuButton/MenuButton";
 import Footer from "../components/Footer/Footer";
 import Layout from "../components/layout";
 import {Map, TileLayer, Marker, Popup} from 'react-leaflet';
+import L from 'leaflet';
 
 
 import "./speakers_map.css";
@@ -43,6 +44,15 @@ class SpeakersMapPage extends Component {
     this.setState({ menuOpen: false });
   };
 
+  /*
+  sapOnlineTrackLogo = new L.Icon({
+    iconUrl: '../static/logos/suitcaseIcon.svg',
+    iconRetinaUrl: '../assets/suitcaseIcon.svg',
+    iconAnchor: [20, 40],
+    popupAnchor: [0, -35],
+    iconSize: [40, 40]
+  });*/
+
   //Nomatim rules have changed and API calls must be 1 second apart, which is lame
   /*convertLocationtoLatLon = location =>{
     fetch('https://nominatim.openstreetmap.org/search?country=' + location + '&format=json', {mode:'no-cors'})
@@ -60,7 +70,17 @@ class SpeakersMapPage extends Component {
         var mapPin = new Object();
         mapPin.location = location.location;
         mapPin.position = [ parseFloat(location.latstring.replace(/'/g,'')), parseFloat(location.lonstring.replace(/'/g,''))];
+        mapPin.speakers = [];
+        mapPin.speakers.push(location.who);
         mapPins.push(mapPin);
+      }else{
+        mapPins.forEach(pin =>{
+          if(pin.location === location.location){
+            if(pin.speakers.includes(location.who) === false){
+              pin.speakers.push(location.who);
+            }
+          }
+        });
       }
     });
     
@@ -104,12 +124,21 @@ class SpeakersMapPage extends Component {
             </div>  
             <div>
             
-            <Map center={centrePosition} zoom={2} className="SpeakerMap">
+            <Map center={centrePosition} zoom={2} className="speaker-map">
               <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"/>
               
               {mappingPins.map((pin, i) =>
-                <Marker position={pin.position} key={i}>
-                  <Popup>{pin.location}</Popup>
+                <Marker position={pin.position} key={i} >
+                  <Popup>
+                    <h5>{pin.location}</h5>
+                    <table className="speaker-pin-table">
+                    <tbody>
+                    {pin.speakers.map((speaker, j) =>
+                      <tr key={j}><td>{speaker}</td></tr>
+                    )}
+                    </tbody>
+                    </table>
+                  </Popup>
                 </Marker>
               )}
             </Map>

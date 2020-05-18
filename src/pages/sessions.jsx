@@ -88,20 +88,20 @@ class SessionsPage extends Component {
             <div>
           
             <Table className='sessions-table'>
-            <Thead>
-              <Tr>
-                <Th>Track</Th>
-                <Th>Title</Th>
-                <Th className='collapsable'>Description</Th>
-                <Th>Speaker</Th>
+            <Thead className='sessions-table-head'>
+              <Tr className='sessions-table-row'>
+                <Th className='sessions-table-header'>Track</Th>
+                <Th className='sessions-table-header'>Title</Th>
+                <Th className='sessions-table-data collapsable'>Description</Th>
+                <Th className='sessions-table-header'>Speaker</Th>
              </Tr>
              </Thead>
-             <Tbody>
+             <Tbody className='sessions-table-body'>
              {sessions.map((session, i) => 
 
-             <Tr key={i}>
-                <Td>{session.track}</Td>
-                <Td>
+             <Tr key={i} className='sessions-table-row'>
+                <Td className='sessions-table-data'>{session.track}</Td>
+                <Td className='sessions-table-data'>
                   {session.titleofthesession}
                   <br/>
                   <br/>
@@ -109,8 +109,8 @@ class SessionsPage extends Component {
                   <br/>
                   {session.languageofyoursession}
                 </Td>
-                <Td className='collapsable'>{session.sessiondescription}</Td>
-                <Td>
+                <Td className='sessions-table-data collapsable'>{session.sessiondescription}</Td>
+                <Td className='sessions-table-data'>
                   {session.useronthesapcommunity !== null &&
                     <a href={'https://people.sap.com/' + session.useronthesapcommunity}>{session.yourname}</a>
                   }

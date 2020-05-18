@@ -6,7 +6,13 @@
     margin-right: 5%; 
 }
 
-.SpeakerMap {
+.speaker-map {
     height: 600px;
 }
 
+.speaker-pin-table > tbody > tr:nth-child(odd) > td {
+        background-color: white;
+        border: 1px solid white;
+        border-color: white;
+        border-top: 1px solid white;
+}
