@@ -111,15 +111,15 @@ class SessionsPage extends Component {
                 </Td>
                 <Td className='sessions-table-data collapsable'>{session.sessiondescription}</Td>
                 <Td className='sessions-table-data'>
-                  {session.useronthesapcommunity !== null &&
+                  {(session.useronthesapcommunity !== null && /[,]/.test(session.yourname) === false) &&
                     <a href={'https://people.sap.com/' + session.useronthesapcommunity}>{session.yourname}</a>
                   }
                   {
-                  session.useronthesapcommunity === null &&
+                  (session.useronthesapcommunity === null || /[,]/.test(session.yourname) === true) &&
                     session.yourname
                   }
                   <br/>
-                  {session.twitterhandle !== null &&
+                  {(session.twitterhandle !== null && /[,]/.test(session.yourname) === false) &&
                   <a href={this.convertTwitterHandleToHRef(session.twitterhandle)}>({session.twitterhandle})</a>
                   }
                 </Td>
@@ -147,7 +147,8 @@ class SessionsPage extends Component {
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
 query {
-  allGoogleSheetSpeakersRow(sort: {fields: track}, filter: {track: {ne: "?"}}) {
+  allGoogleSheetSpeakersRow(sort: {fields: track}, filter: {confirmed: {ne: "-"}}) {
+    totalCount
     nodes {
       twitterhandle
       titleofthesession
