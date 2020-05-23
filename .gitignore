@@ -63,3 +63,6 @@ bundle-stats.json
 
 # Private Keys
 keys
+
+#VS Code
+.vscode

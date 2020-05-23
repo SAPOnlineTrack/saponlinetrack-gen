@@ -92,6 +92,14 @@ module.exports = {
           {
             resolve: 'gatsby-source-google-sheets',
             options: {
+                spreadsheetId: '1LAKhinHcv6OBkefE7gPuoogGqQNZx1IvEtug8KJyDoQ',
+                worksheetTitle: 'TeamUpExtract',
+                credentials: require('./keys/saponlinetrack-5a50ee74ea26.json')
+            }
+          },
+          {
+            resolve: 'gatsby-source-google-sheets',
+            options: {
                 spreadsheetId: '17jQoUKUTDZzrEjmVqVo_PEODqENGMTyUOr_bRrW-iLM',
                 worksheetTitle: 'Sheet1',
                 credentials: require('./keys/saponlinetrack-5a50ee74ea26.json')
