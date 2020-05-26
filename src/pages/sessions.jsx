@@ -21,6 +21,8 @@ import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 
 import "./sessions.css";
 
+import SessionsTable from "../components/SessionsTable/SessionsTable";
+
 class SessionsPage extends Component {
   state = {
     menuOpen: false
@@ -102,9 +104,6 @@ class SessionsPage extends Component {
             track3Sessions.push(session);
             break;
         }
-
-
-
       }
 
 
@@ -154,6 +153,8 @@ class SessionsPage extends Component {
                   This is the final list of sessions for SAP Online Track.
               Check out the complete schedule view for the event on our <a href="https://teamup.com/ks9xjppwq4sm4d291a" target="_blank">teamup page</a> put together by the awesome
               Srikanth Peri
+              <br />
+              Click on the track name to navigate to the YouTube the session link. Note it will not start until the scheduled time.
             </div>
                 <div>
 
@@ -166,180 +167,16 @@ class SessionsPage extends Component {
                     </TabList>
 
                     <TabPanel>
-                      <Table className='sessions-table'>
-                        <Thead className='sessions-table-head'>
-                          <Tr className='sessions-table-row'>
-                            <Th className='sessions-table-header'>Track / Code</Th>
-                            <Th className='sessions-table-header'>Date/Time (UTC)</Th>
-                            <Th className='sessions-table-header'>Title</Th>
-                            <Th className='sessions-table-data collapsable'>Description</Th>
-                            <Th className='sessions-table-header'>Speaker</Th>
-                          </Tr>
-                        </Thead>
-                        <Tbody className='sessions-table-body'>
-                          {sessions.all.map((session, i) =>
-
-                            <Tr key={i} className='sessions-table-row'>
-                              <Td className='sessions-table-data'>{session.calendarname} <a href={session.calendarlink} >[{session.sessioncode}]</a></Td>
-                              <Td className='sessions-table-data'>{session.startdate} {session.starttime}</Td>
-                              <Td className='sessions-table-data'>
-                                {(session.blogurl !== null) &&
-                                  <a href={session.blogurl}>{session.subject2}</a>
-                                }
-                                {(session.blogurl === null) &&
-                                  session.subject2
-                                }
-                              </Td>
-                              <Td className='sessions-table-data collapsable'>{session.description}</Td>
-                              <Td className='sessions-table-data'>
-                                {(session.useronthesapcommunity !== null && /[,]/.test(session.who) === false) &&
-                                  <a href={'https://people.sap.com/' + session.useronthesapcommunity}>{session.who}</a>
-                                }
-                                {
-                                  (session.useronthesapcommunity === null || /[,]/.test(session.who) === true) &&
-                                  session.who
-                                }
-                                <br />
-                                {(session.twitterhandle !== null && /[,]/.test(session.who) === false) &&
-                                  <a href={this.convertTwitterHandleToHRef(session.twitterhandle)}>({session.twitterhandle})</a>
-                                }
-                              </Td>
-                            </Tr>
-                          )}
-                        </Tbody>
-                      </Table>
+                      <SessionsTable sessions={sessions.all}></SessionsTable>
                     </TabPanel>
                     <TabPanel>
-                      <Table className='sessions-table'>
-                        <Thead className='sessions-table-head'>
-                          <Tr className='sessions-table-row'>
-                            <Th className='sessions-table-header'>Track / Code</Th>
-                            <Th className='sessions-table-header'>Date/Time (UTC)</Th>
-                            <Th className='sessions-table-header'>Title</Th>
-                            <Th className='sessions-table-data collapsable'>Description</Th>
-                            <Th className='sessions-table-header'>Speaker</Th>
-                          </Tr>
-                        </Thead>
-                        <Tbody className='sessions-table-body'>
-                          {sessions.track1.map((session, i) =>
-
-                            <Tr key={i} className='sessions-table-row'>
-                              <Td className='sessions-table-data'>{session.calendarname} <a href={session.calendarlink} >[{session.sessioncode}]</a></Td>
-                              <Td className='sessions-table-data'>{session.startdate} {session.starttime}</Td>
-                              <Td className='sessions-table-data'>
-                                {(session.blogurl !== null) &&
-                                  <a href={session.blogurl}>{session.subject2}</a>
-                                }
-                                {(session.blogurl === null) &&
-                                  session.subject2
-                                }
-                              </Td>
-                              <Td className='sessions-table-data collapsable'>{session.description}</Td>
-                              <Td className='sessions-table-data'>
-                                {(session.useronthesapcommunity !== null && /[,]/.test(session.who) === false) &&
-                                  <a href={'https://people.sap.com/' + session.useronthesapcommunity}>{session.who}</a>
-                                }
-                                {
-                                  (session.useronthesapcommunity === null || /[,]/.test(session.who) === true) &&
-                                  session.who
-                                }
-                                <br />
-                                {(session.twitterhandle !== null && /[,]/.test(session.who) === false) &&
-                                  <a href={this.convertTwitterHandleToHRef(session.twitterhandle)}>({session.twitterhandle})</a>
-                                }
-                              </Td>
-                            </Tr>
-                          )}
-                        </Tbody>
-                      </Table>
+                      <SessionsTable sessions={sessions.track1}></SessionsTable>
                     </TabPanel>
                     <TabPanel>
-                      <Table className='sessions-table'>
-                        <Thead className='sessions-table-head'>
-                          <Tr className='sessions-table-row'>
-                            <Th className='sessions-table-header'>Track / Code</Th>
-                            <Th className='sessions-table-header'>Date/Time (UTC)</Th>
-                            <Th className='sessions-table-header'>Title</Th>
-                            <Th className='sessions-table-data collapsable'>Description</Th>
-                            <Th className='sessions-table-header'>Speaker</Th>
-                          </Tr>
-                        </Thead>
-                        <Tbody className='sessions-table-body'>
-                          {sessions.track2.map((session, i) =>
-
-                            <Tr key={i} className='sessions-table-row'>
-                              <Td className='sessions-table-data'>{session.calendarname} <a href={session.calendarlink} >[{session.sessioncode}]</a></Td>
-                              <Td className='sessions-table-data'>{session.startdate} {session.starttime}</Td>
-                              <Td className='sessions-table-data'>
-                                {(session.blogurl !== null) &&
-                                  <a href={session.blogurl}>{session.subject2}</a>
-                                }
-                                {(session.blogurl === null) &&
-                                  session.subject2
-                                }
-                              </Td>
-                              <Td className='sessions-table-data collapsable'>{session.description}</Td>
-                              <Td className='sessions-table-data'>
-                                {(session.useronthesapcommunity !== null && /[,]/.test(session.who) === false) &&
-                                  <a href={'https://people.sap.com/' + session.useronthesapcommunity}>{session.who}</a>
-                                }
-                                {
-                                  (session.useronthesapcommunity === null || /[,]/.test(session.who) === true) &&
-                                  session.who
-                                }
-                                <br />
-                                {(session.twitterhandle !== null && /[,]/.test(session.who) === false) &&
-                                  <a href={this.convertTwitterHandleToHRef(session.twitterhandle)}>({session.twitterhandle})</a>
-                                }
-                              </Td>
-                            </Tr>
-                          )}
-                        </Tbody>
-                      </Table>
+                      <SessionsTable sessions={sessions.track2}></SessionsTable>
                     </TabPanel>
                     <TabPanel>
-                      <Table className='sessions-table'>
-                        <Thead className='sessions-table-head'>
-                          <Tr className='sessions-table-row'>
-                            <Th className='sessions-table-header'>Track / Code</Th>
-                            <Th className='sessions-table-header'>Date/Time (UTC)</Th>
-                            <Th className='sessions-table-header'>Title</Th>
-                            <Th className='sessions-table-data collapsable'>Description</Th>
-                            <Th className='sessions-table-header'>Speaker</Th>
-                          </Tr>
-                        </Thead>
-                        <Tbody className='sessions-table-body'>
-                          {sessions.track3.map((session, i) =>
-
-                            <Tr key={i} className='sessions-table-row'>
-                              <Td className='sessions-table-data'>{session.calendarname} <a href={session.calendarlink} >[{session.sessioncode}]</a></Td>
-                              <Td className='sessions-table-data'>{session.startdate} {session.starttime}</Td>
-                              <Td className='sessions-table-data'>
-                                {(session.blogurl !== null) &&
-                                  <a href={session.blogurl}>{session.subject2}</a>
-                                }
-                                {(session.blogurl === null) &&
-                                  session.subject2
-                                }
-                              </Td>
-                              <Td className='sessions-table-data collapsable'>{session.description}</Td>
-                              <Td className='sessions-table-data'>
-                                {(session.useronthesapcommunity !== null && /[,]/.test(session.who) === false) &&
-                                  <a href={'https://people.sap.com/' + session.useronthesapcommunity}>{session.who}</a>
-                                }
-                                {
-                                  (session.useronthesapcommunity === null || /[,]/.test(session.who) === true) &&
-                                  session.who
-                                }
-                                <br />
-                                {(session.twitterhandle !== null && /[,]/.test(session.who) === false) &&
-                                  <a href={this.convertTwitterHandleToHRef(session.twitterhandle)}>({session.twitterhandle})</a>
-                                }
-                              </Td>
-                            </Tr>
-                          )}
-                        </Tbody>
-                      </Table>
+                      <SessionsTable sessions={sessions.track3}></SessionsTable>
                     </TabPanel>
                   </Tabs>
                 </div>
@@ -388,6 +225,7 @@ query {
       endtime
       calendarname
       calendarlink
+      streaminglink
     }
   }
 }
