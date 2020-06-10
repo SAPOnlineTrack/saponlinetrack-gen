@@ -11,6 +11,7 @@ import BlogLogo from "../components/BlogLogo/BlogLogo";
 import MenuButton from "../components/MenuButton/MenuButton";
 import Footer from "../components/Footer/Footer";
 import Layout from "../components/layout";
+import SEO from "../components/SEO/SEO";
 
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
@@ -48,12 +49,6 @@ class SessionsPage extends Component {
 
   closeMenu = () => {
     this.setState({ menuOpen: false });
-  };
-
-  convertTwitterHandleToHRef = (twitterHandle) => {
-    if (twitterHandle === null) return "";
-
-    return "https://twitter.com/" + twitterHandle.substr(1);
   };
 
   formatDateToEuropean = (date) => {
@@ -123,10 +118,12 @@ class SessionsPage extends Component {
     const speakers = this.props.data.allGoogleSheetSpeakersRow.nodes;
     let sessions = this.props.data.allGoogleSheetTeamUpExtractRow.nodes;
     sessions = this.mergeSpeakersToSessions(speakers, sessions);
+    const { nodes } = this.props.pageContext;
 
     return (
       <div className="sessions-container">
         <Helmet title={`Sessions | ${config.siteTitle}`} />
+        <SEO postEdges={nodes}/>
         <Layout location={this.props.location}>
           <Drawer className="sessions-template" isOpen={this.state.menuOpen}>
             <Helmet title={`Speaker Sessions | ${config.siteTitle}`} />

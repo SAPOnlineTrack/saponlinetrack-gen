@@ -11,8 +11,8 @@ module.exports = {
   siteDescription: "A free SAP Community event hosted entirely online", // Website description used for RSS feeds/meta description tag.
   siteCover:"/images/home-banner.jpg", // Optional, the cover image used in header for home page. e.g: "/images/blog-cover.jpg",
   siteNavigation: true, // If navigation is enabled the Menu button will be visible
-  siteBanner:"It's Official. The schedule for May 30th is set!!!", // Site Banner 
-  siteBannerUrl: "https://teamup.com/ks9xjppwq4sm4d291a", //Path to page to navigate from Site Banner
+  siteBanner:"Well that's a wrap. Huge Thanks to all that turned out and please check out the replays on our YouTube channel", // Site Banner 
+  //siteBannerUrl: "https://teamup.com/ks9xjppwq4sm4d291a", //Path to page to navigate from Site Banner
   siteCharityText:"Show Support & Donate", // Site Banner 
   siteCharityUrl: "https://classy.org/team/285233", //Path to page to navigate from Site Banner
   siteCharityImgUrl: "/images/GirlsWhoCodeLogo-White-on-Blue.jpg", //Path to image of charity URL 

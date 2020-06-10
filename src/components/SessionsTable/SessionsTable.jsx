@@ -6,9 +6,6 @@ import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 import "./SessionsTable.css";
 
 class SessionsTable extends React.Component {
-  state = {
-    menuOpen: false
-  };
 
   convertTwitterHandleToHRef = (twitterHandle) => {
     if (twitterHandle === null) return "";

@@ -20,6 +20,8 @@ import PageCharity from "../components/PageCharity/PageCharity";
 import PaginatedContent from "../components/PaginatedContent/PaginatedContent";
 import SocialMediaIcons from "../components/SocialMediaIcons/SocialMediaIcons";
 import Layout from "../components/layout";
+import EventCountdown from '../components/EventCountdown/EventCountdown';
+
 
 
 
@@ -93,6 +95,8 @@ class IndexTemplate extends React.Component {
                       color="currentColor"
                     />
                     <PageCharity text={config.siteCharityText} url={config.siteCharityUrl} imgUrl={config.siteCharityImgUrl} />
+
+                    { /*<EventCountdown date={ Date.UTC(2020, 4, 30, 12, 0, 0) }/> */}
                   </div>
                   
                 </div>
