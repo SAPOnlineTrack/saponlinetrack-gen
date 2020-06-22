@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Helmet from "react-helmet";
 import config from "../../data/SiteConfig";
 import Drawer from "../components/Drawer/Drawer";
+import SEO from "../components/SEO/SEO";
 import Navigation from "../components/Navigation/Navigation";
 import SiteWrapper from "../components/SiteWrapper/SiteWrapper";
 import MainHeader from "../components/MainHeader/MainHeader";
@@ -92,6 +93,8 @@ class SpeakersMapPage extends Component {
     const locations = this.props.data.allGoogleSheetSpeakerLocationsRow.nodes;
     const mappingPins = this.getMappingPins(locations);
     const centrePosition = [51.505, -0.09]; 
+    const { nodes } = this.props.pageContext;
+    
     
     return (
       <div className="speakers-map-container">
@@ -99,6 +102,7 @@ class SpeakersMapPage extends Component {
         <Layout location={this.props.location}>
         <Drawer className="speakers-map-template" isOpen={this.state.menuOpen}>
           <Helmet title={`Speakers Map | ${config.siteTitle}`} />
+          <SEO postEdges={nodes} />
 
           {/* The blog navigation links */}
           <Navigation config={config} onClose={this.handleOnClose} />
