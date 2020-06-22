@@ -6,6 +6,7 @@ module.exports = {
   siteTitle: "SAP Online Track ", // Site title.
   siteTitleAlt: "SAP Online Track", // Alternative site title for SEO.
   siteLogo: "/logos/home.png", // Logo used for SEO and manifest. e.g. "/logos/logo-1024.png",
+  siteLogoSocialMedia: "/images/post-header.png",
   siteUrl: "https://SAPOnlineTrack.github.io", // sitbneDomain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
   siteDescription: "A free SAP Community event hosted entirely online", // Website description used for RSS feeds/meta description tag.

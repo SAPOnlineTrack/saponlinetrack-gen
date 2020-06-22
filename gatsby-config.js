@@ -77,7 +77,7 @@ module.exports = {
             options: {
                 spreadsheetId: '1LAKhinHcv6OBkefE7gPuoogGqQNZx1IvEtug8KJyDoQ',
                 worksheetTitle: 'SpeakerLocations',
-                credentials: require('./keys/saponlinetrack-5a50ee74ea26.json')
+                credentials: require('./keys/saponlinetrack-b8284eab1ab7.json')
             }
           },
           
@@ -86,7 +86,7 @@ module.exports = {
             options: {
                 spreadsheetId: '1LAKhinHcv6OBkefE7gPuoogGqQNZx1IvEtug8KJyDoQ',
                 worksheetTitle: 'Speakers',
-                credentials: require('./keys/saponlinetrack-5a50ee74ea26.json')
+                credentials: require('./keys/saponlinetrack-b8284eab1ab7.json')
             }
           },
           {
@@ -94,7 +94,7 @@ module.exports = {
             options: {
                 spreadsheetId: '1LAKhinHcv6OBkefE7gPuoogGqQNZx1IvEtug8KJyDoQ',
                 worksheetTitle: 'TeamUpExtract',
-                credentials: require('./keys/saponlinetrack-5a50ee74ea26.json')
+                credentials: require('./keys/saponlinetrack-b8284eab1ab7.json')
             }
           },
           {
@@ -102,7 +102,7 @@ module.exports = {
             options: {
                 spreadsheetId: '17jQoUKUTDZzrEjmVqVo_PEODqENGMTyUOr_bRrW-iLM',
                 worksheetTitle: 'Sheet1',
-                credentials: require('./keys/saponlinetrack-5a50ee74ea26.json')
+                credentials: require('./keys/saponlinetrack-b8284eab1ab7.json')
             }
           }
           
